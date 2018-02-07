@@ -5,10 +5,10 @@
 <meta name="keywords" content="司法鉴定" />
 <meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
 <title>鉴定人</title>
-<link rel="stylesheet" href="/web/resources/css/global.css">
+<link rel="stylesheet" href="/resources/css/global.css">
 <!-- 分页 -->
-<link rel="stylesheet" href="/web/resources/css/reset.css">
-<link rel="stylesheet" href="/web/resources/css/pageCode.css">
+<link rel="stylesheet" href="/resources/css/reset.css">
+<link rel="stylesheet" href="/resources/css/pageCode.css">
 </head>
 
 
@@ -37,7 +37,7 @@
 <div id="top">
 	<div class="w">
 		<h1>
-			<img id="tosy"  src="/web/resources/images/pic/logo.png" alt="">
+			<img id="tosy"  src="/resources/images/pic/logo.png" alt="">
 		</h1>
 		<form action="touser" method="post" id="soufuoForm">
 		<input type="hidden" name="province" value="${province!}" id="province">
@@ -66,9 +66,9 @@
 				</div>
 				<div class="right l">
 					<!-- <span class="l">全部</span> -->
-					<a href="/web/tosousuo" class="l">全部</a>
-					<!-- <a href="/web/toorg?province=${province!}&key=${key!}&range=${range}" class="l">鉴定机构</a>
-					<a href="/web/touser?province=${province!}&key=${key!}&range=${range}" class="l act">鉴定人</a> -->
+					<a href="/tosousuo" class="l">全部</a>
+					<!-- <a href="/toorg?province=${province!}&key=${key!}&range=${range}" class="l">鉴定机构</a>
+					<a href="/touser?province=${province!}&key=${key!}&range=${range}" class="l act">鉴定人</a> -->
 					<a href="javascript:toorgform();" class="l">鉴定机构</a>
 					<a href="javascript:touserform();" class="l act">鉴定人</a>
 				</div>
@@ -172,15 +172,15 @@
 		<!-- 块元素开始 -->
 		<div class="content_blokc">
 			<div class="left l">
-				<img src="/web/resources/images/pic/sifajiandingren.png" alt="">
+				<img src="/resources/images/pic/sifajiandingren.png" alt="">
 			</div>
 			<div class="right r">
 				<div class="content_blokc_right_top">
-					<div class="zuo l"><a class="zuo l" href="/web/touserxx/${user.id}">${user.realname}</a></div>
+					<div class="zuo l"><a class="zuo l" href="/touserxx/${user.id}">${user.realname}</a></div>
 					<div class="you r">
 						<h3 class="l">司法鉴定人执业证号：<span>${user.zyzh}</span></h3>
 						<h4 class="l">
-							<i class="l"><img src="/web/resources/images/pic/content_h4.png" alt=""></i>
+							<i class="l"><img src="/resources/images/pic/content_h4.png" alt=""></i>
 							<p class="l">所在鉴定机构：<a href="toorgxx/${user.orgPubId}" class="gg_wz" id="suozaidanwei">${user.orgName}</a></p>
 						</h4>
 					</div>
@@ -235,7 +235,7 @@
 					</a>
 				</div>
 				<div class="content_blokc_right_text">
-					<a href="/web/touserxx/${user.id}">${user.intro}</a>
+					<a href="/touserxx/${user.id}">${user.intro}</a>
 				</div>
 			</div>
 		</div><!-- 块元素 结束 -->
@@ -245,7 +245,7 @@
 		<!--
 		<div class="content_blokc">
 			<div class="left l">
-				<img src="/web/resources/images/pic/sifajiandingren.png" alt="">
+				<img src="/resources/images/pic/sifajiandingren.png" alt="">
 			</div>
 			<div class="right r">
 
@@ -292,7 +292,7 @@
 	<div class="w">
 		<div class="footer_box">
 			<div class="left l">
-				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+				<img src="/resources/images/pic/logo_bottom.png" alt="">
 			</div>
 			<div class="right r">
 				<div class="right_1">
@@ -311,9 +311,9 @@
 	</div> -->
 </div>	
 </body>
-<script src="/web/resources/js/jquery.min.js"></script>
-<script src="/web/resources/js/jquery.page.js"></script>
-<script src="/web/resources/js/global.js"></script>
+<script src="/resources/js/jquery.min.js"></script>
+<script src="/resources/js/jquery.page.js"></script>
+<script src="/resources/js/global.js"></script>
 <script>
 
 function toorgform(){
@@ -348,7 +348,7 @@ function torange(range){
     $("#soufuoForm").submit();
 }
 $("#tosy").click(function(){
-	   window.location.href="/web/toindex"
+	   window.location.href="/toindex"
 });
 
 //给当前的省添加高亮

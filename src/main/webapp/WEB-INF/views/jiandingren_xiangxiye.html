@@ -5,8 +5,8 @@
 <meta name="keywords" content="司法鉴定" />
 <meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
 <title>鉴定人详细</title>
-<link rel="stylesheet" href="/web/resources/css/global.css">
-<link rel="stylesheet" href="/web/resources/css/xiangxi.css">
+<link rel="stylesheet" href="/resources/css/global.css">
+<link rel="stylesheet" href="/resources/css/xiangxi.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 <div class="tupiandanchuceng">
 	<span class="tupiandanchuceng_gb">关闭</span>
 	<div class="tupiandanchuceng_box">
-		<img   src="/web/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
+		<img   src="/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
 	</div>
 </div>
 
@@ -25,9 +25,9 @@
 <div id="top">
 	<div class="w">
 		<h1>
-			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="">
+			<img id="tosy" src="/resources/images/pic/logo.png" alt="">
 		</h1>
-		<form action="/web/touser" method="post" id="soufuoForm">
+		<form action="/touser" method="post" id="soufuoForm">
 			<div class="search">
 				<div class="left l">
 					<input id="neirong" type="text" name="key" placeholder="请输入您想查找的内容">
@@ -45,7 +45,7 @@
 	<div class="w">
 		<div class="content_title">
 			<div class="left l">
-				<img src="/web/resources/images/pic/sifajiandingren.png" alt="">
+				<img src="/resources/images/pic/sifajiandingren.png" alt="">
 			</div>
 			<div class="right l" style="width:990px;">
 				<div class="content_title_right_top">
@@ -53,7 +53,7 @@
 						${user.realname}
 					</div>
 					<div class="information l">
-						<div class="zzdw l"><p style="border-bottom:1px solid #37d114;">所在鉴定机构：<a href="/web/toorgxx/${user.orgPubId}" style="color:#0666ba;">${user.orgName}</a></p></div>
+						<div class="zzdw l"><p style="border-bottom:1px solid #37d114;">所在鉴定机构：<a href="/toorgxx/${user.orgPubId}" style="color:#0666ba;">${user.orgName}</a></p></div>
 					    <div class="xkzh l">司法鉴定人执业证号：${user.zyzh}</div>
 					</div>
 				</div>
@@ -237,7 +237,7 @@
 				<div class="xukezhengyouxiaoqi">
 					<p>执业证有效期</p>
 					<div class="xukezhengyouxiaoqi_box">
-						<div class="l"><img src="/web/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
+						<div class="l"><img src="/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
 						<div class="r">
 							<p class="s riqi">
 								<b><#if (user.workTime)??>${(user.workTime)?string("yyyy-MM-dd")}</#if> </b>
@@ -272,13 +272,13 @@
 	<div class="w">
 		<div class="footer_box">
 			<div class="left l">
-				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+				<img src="/resources/images/pic/logo_bottom.png" alt="">
 			</div>
 			<div class="right r">
 				<div class="right_1">
 					<!-- <a href="###">关于我们</a> -->
-					<a href="/web/mianze">有关声明</a>
-					<a href="/web/lianxi">联系我们</a>
+					<a href="/mianze">有关声明</a>
+					<a href="/lianxi">联系我们</a>
 					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
 				</div>
 				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
@@ -291,8 +291,8 @@
 	</div> -->
 </div>
 </body>
-<script src="/web/resources/js/jquery.min.js"></script>
-<script src="/web/resources/js/global.js"></script>
+<script src="/resources/js/jquery.min.js"></script>
+<script src="/resources/js/global.js"></script>
 <script>
 if($(".xm").html()==""){
 	$(".jibenxinxi a").siblings('input').val("0")
@@ -324,7 +324,7 @@ $(function(){
   });
   
 	$("#tosy").click(function(){
-	   	window.location.href="/web/toindex";
+	   	window.location.href="/toindex";
 	});
   
 });

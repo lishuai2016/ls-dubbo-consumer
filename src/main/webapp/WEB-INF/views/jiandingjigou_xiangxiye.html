@@ -5,8 +5,8 @@
 <meta name="keywords" content="司法鉴定" />
 <meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
 <title>鉴定机构详细</title>
-<link rel="stylesheet" href="/web/resources/css/global.css">
-<link rel="stylesheet" href="/web/resources/css/xiangxi.css">
+<link rel="stylesheet" href="/resources/css/global.css">
+<link rel="stylesheet" href="/resources/css/xiangxi.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 <div class="tupiandanchuceng">
 	<span class="tupiandanchuceng_gb">关闭</span>
 	<div class="tupiandanchuceng_box">
-		<img src="/web/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
+		<img src="/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
 	</div>
 </div>
 
@@ -25,9 +25,9 @@
 <div id="top">
 	<div class="w">
 		<h1>
-			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="">
+			<img id="tosy" src="/resources/images/pic/logo.png" alt="">
 		</h1>
-		<form action="/web/toorg" method="post" id="soufuoForm">
+		<form action="/toorg" method="post" id="soufuoForm">
 			<div class="search">
 				<div class="left l">
 					<input id="neirong" type="text" name="key" placeholder="请输入您想查找的内容">
@@ -45,7 +45,7 @@
 	<div class="w">
 		<div class="content_title" style="height:250px;">
 			<div class="left l">
-				<img src="/web/resources/images/pic/falvfuwusuo.png" alt="">
+				<img src="/resources/images/pic/falvfuwusuo.png" alt="">
 			</div>
 			<div class="right l">
 				<div class="content_title_right_top" style="border-bottom:1px solid #CCC; padding-bottom:20px;">
@@ -215,7 +215,7 @@
 				<#if orguser?exists> 
   					 <#list orguser as orguser> 
 
-						<a href="/web/touserxx/${orguser.id}">${orguser.realname}</a>
+						<a href="/touserxx/${orguser.id}">${orguser.realname}</a>
 
 					 </#list> 
 				</#if>			
@@ -267,7 +267,7 @@
 				<div class="xukezhengyouxiaoqi">
 					<p>许可证有效期</p>
 					<div class="xukezhengyouxiaoqi_box">
-						<div class="l"><img src="/web/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
+						<div class="l"><img src="/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
 						<div class="r">
 							<p class="s riqi">
 							    <b><#if org.validStart??>${(org.validStart)?string("yyyy-MM-dd")}</#if></b>
@@ -312,13 +312,13 @@
 	<div class="w">
 		<div class="footer_box">
 			<div class="left l">
-				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+				<img src="/resources/images/pic/logo_bottom.png" alt="">
 			</div>
 			<div class="right r">
 				<div class="right_1">
 					<!-- <a href="###">关于我们</a> -->
-					<a href="/web/mianze">有关声明</a>
-					<a href="/web/lianxi">联系我们</a>
+					<a href="/mianze">有关声明</a>
+					<a href="/lianxi">联系我们</a>
 					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
 				</div>
 				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
@@ -331,9 +331,9 @@
 	</div> -->
 </div>	
 </body>
-<script src="/web/resources/js/jquery.min.js"></script>
-<!-- <script src="/web/resources/js/jiandingjigou_xiangxiye.js"></script> -->
-<script src="/web/resources/js/global.js"></script>
+<script src="/resources/js/jquery.min.js"></script>
+<!-- <script src="/resources/js/jiandingjigou_xiangxiye.js"></script> -->
+<script src="/resources/js/global.js"></script>
 <script>
 /* /* 能力验证  start*/
 $(document).ready(function() { 			
@@ -357,7 +357,7 @@ $(document).ready(function() {
 			if(result!="未通过"){
 				 var url_s = '${baseurl}'+list[i].lastyacFile
 				 
-				 $("table").append('<tr><td class="xuhao"><i>'+(i+1)+'</i></td><td class="xiangmu">'+list[i].lastyacItem+'</td><td class="TIme">'+list[i].lastyacTime+'</td><td class="REsults">'+result+'</td><td class="zhengshu"><a href="###" class="zhengshu_btn"><img src="/web/resources/images/pic/zhengshu_ss.png" alt=""><input type="hidden" value="'+url_s+'"/></a></td>');
+				 $("table").append('<tr><td class="xuhao"><i>'+(i+1)+'</i></td><td class="xiangmu">'+list[i].lastyacItem+'</td><td class="TIme">'+list[i].lastyacTime+'</td><td class="REsults">'+result+'</td><td class="zhengshu"><a href="###" class="zhengshu_btn"><img src="/resources/images/pic/zhengshu_ss.png" alt=""><input type="hidden" value="'+url_s+'"/></a></td>');
 				 $(".zhengshu_btn").click(function(event) {
 						$(".zhezhaoceng").slideDown(300);
 						$(".tupiandanchuceng").slideDown(400);
@@ -401,7 +401,7 @@ $(function(){
   });
    
   $("#tosy").click(function(){
-	   window.location.href="/web/toindex"
+	   window.location.href="/toindex"
   });
 });
 
