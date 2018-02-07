@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="司法鉴定" />
+<meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
+<title>鉴定人详细</title>
+<link rel="stylesheet" href="/web/resources/css/global.css">
+<link rel="stylesheet" href="/web/resources/css/xiangxi.css">
+</head>
+
+<body>
+<!-- 遮罩层 -->
+<div class="zhezhaoceng"></div>
+<!-- 图片弹出层 -->
+<div class="tupiandanchuceng">
+	<span class="tupiandanchuceng_gb">关闭</span>
+	<div class="tupiandanchuceng_box">
+		<img   src="/web/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
+	</div>
+</div>
+
+
+<!-- 公共搜索头部 -->
+<div id="top">
+	<div class="w">
+		<h1>
+			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="">
+		</h1>
+		<form action="/web/touser" method="post" id="soufuoForm">
+			<div class="search">
+				<div class="left l">
+					<input id="neirong" type="text" name="key" placeholder="请输入您想查找的内容">
+				</div>
+				<div class="right r">
+					<input id="sousuo" type="submit" value="搜  索">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- 内容开始 -->
+<div class="content">
+	<div class="w">
+		<div class="content_title">
+			<div class="left l">
+				<img src="/web/resources/images/pic/sifajiandingren.png" alt="">
+			</div>
+			<div class="right l" style="width:990px;">
+				<div class="content_title_right_top">
+					<div class="name l">
+						${user.realname}
+					</div>
+					<div class="information l">
+						<div class="zzdw l"><p style="border-bottom:1px solid #37d114;">所在鉴定机构：<a href="/web/toorgxx/${user.orgPubId}" style="color:#0666ba;">${user.orgName}</a></p></div>
+					    <div class="xkzh l">司法鉴定人执业证号：${user.zyzh}</div>
+					</div>
+				</div>
+				<div class="content_title_right_center">
+					<div class="jiandingren_content_center" style="padding-top:20px;">    
+						<!-- <a href="###">性别： <span>${xb}</span></a>
+						<a href="###" style="color:#333;">从业类型：
+							<#if user.workType?? && user.workType == 0>
+								<span>兼职</span>
+							<#elseif user.workType?? && user.workType == 1>
+							  	<span>专职</span>
+							</#if>
+						</a> -->
+						<!-- <a href="###" style="color:#333;">执业类别：<span>${user.workRange}</span></a> -->
+					</div>
+				</div>
+				<!-- 导航开始 -->
+				<!-- 说明：每一个li下的input 的value=1 说明有数据盒子显示 -->
+				<ul class="content_title_right_bottom">
+					<li class="jibenxinxi active">
+						<a href="#jbxx" class="as">
+							基本信息
+						</a>
+						<input id="123" type="hidden" value="1" title="基本信息">
+					</li>
+					<li class="nengliyanzheng">
+						<a href="#nlyz">
+							执业类别
+						</a>
+						<input type="hidden" value="1" title="能力验证">
+					</li>
+					<li class="jiangliqingkuang">
+						<a href="#jlqk">
+							奖励情况
+						</a>
+						<input type="hidden" value="1" title="奖励情况">
+					</li>
+					<li class="jianjie">
+						<a href="#jgjj">
+							简&nbsp;&nbsp;介
+						</a>
+						<input type="hidden" value="1" title="机构简介">
+					</li>
+				</ul>
+			</div>
+		</div><!-- content_title 结束 -->
+		<div class="content_box">
+			<div class="content_box_left l">
+				<!-- 基本信息 -->
+				<div class="content_box_jbxx" data="基本信息">
+					<a href="###" name="jbxx"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">基本信息</span>
+					</h5>
+					<div class="content_box_jbxx_box">
+						<div class="l"> 
+							<p> 姓名：<span class="xm">${user.realname}</span></p>
+							<p>性别：<span>
+			<#if user.sex?? && user.sex == 0>
+					女
+					<#elseif user.sex?? && user.sex == 1>
+					男
+					</#if>
+</span></p>
+							<p>
+							          年龄：
+							    <input type="hidden" value="<#if (user.birth)??>${(user.birth)?string('yyyy-MM-dd')}</#if>" class="age_input"/>
+								<span></span>
+							</p>
+							<p>
+							          从业年限：
+								<input type="hidden" value="<#if user.registTime??>${(user.registTime)?string('yyyy-MM-dd')}</#if>" class="cy_input"/>
+								<span></span>
+								<u style="color:#000;">年</u>
+							</p>
+							<p>执业证号：<span>${user.zyzh}</span></p>
+						</div>
+						<i></i>
+						<div class="r">
+						    <p>上年度案件量：<span>${user.lastyCount}</span></p>
+							<p>从业类型：<span>
+								<#if user.workType?? && user.workType == 0>
+					兼职
+					<#elseif user.workType?? && user.workType == 1>
+					专职
+					</#if>
+							</span></p>
+							<p>学历：<span>${user.degree}</span></p>
+							<p>职称：<span>${user.title}</span></p>
+						</div>
+					</div>
+				</div>
+				<!-- 能力验证 -->
+				<div class="content_box_nlyz" data="执业类别">
+					<a href="###" name="nlyz"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">执业类别</span>
+					</h5>
+					<div class="content_box_nlyz_box">
+						<span style="font-weight:600;">
+						<#list user.workRange?split("|") as s>
+							${s}
+						</#list>
+						</span>
+						
+						<!-- <table border="1" cellspacing="0" cellpadding="2" bordercolor="#9ab0bd"> 
+							表头
+							<tr class="bt">
+								<td>序号</td>
+								<td>项目</td>
+								<td>时间</td>
+								<td>结果</td>
+								<td>证书</td>
+							</tr>
+							表身
+							<tr class="bs">
+								<td class="xuhao">
+									<i>1</i>
+								</td>
+								<td class="xiangmu">
+									《法医临床学伤残程度鉴定》能力验证（CNASZ0008
+								</td>
+								<td class="shijian">2014-11-01</td>
+								<td class="jieguo">
+									满意
+								</td>
+								<td class="zhengshu">
+									<a href="###" class="zhengshu_btn">
+										<img src="../images/pic/zhengshu_ss.png" alt="">
+									</a>
+								</td>
+							</tr>
+							表身
+							<tr class="bs">
+								<td class="xuhao">
+									<i>2</i>
+								</td>
+								<td class="xiangmu">
+									《法医临床学伤残程度鉴定》能力验证（CNASZ0008
+								</td>
+								<td class="shijian">2014-11-01</td>
+								<td class="jieguo">
+									满意
+								</td>
+								<td class="zhengshu">
+									<a href="###" class="zhengshu_btn">
+										<img src="../images/pic/zhengshu_ss.png" alt="">
+									</a>
+								</td>
+							</tr>
+						</table> -->
+					</div>
+				</div>
+				<!-- 奖励情况 -->
+				<div class="content_box_jlqk" data="奖励情况">
+					<a href="###" name="jlqk"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">奖励情况</span>
+					</h5>
+					<div class="content_box_jlqk_box">
+						<p>${user.myHonor}</p>
+					</div>
+				</div>
+				<!-- 鉴定人简介 -->
+				<div class="content_box_jgjj" data="鉴定人简介">
+					<a href="###" name="jgjj"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">鉴定人简介</span>
+					</h5>
+					<div class="content_box_jgjj_box">
+						<div>${user.intro}</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_box_right r">
+				<!-- 许可证有效期 -->
+				<div class="xukezhengyouxiaoqi">
+					<p>执业证有效期</p>
+					<div class="xukezhengyouxiaoqi_box">
+						<div class="l"><img src="/web/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
+						<div class="r">
+							<p class="s riqi">
+								<b><#if (user.workTime)??>${(user.workTime)?string("yyyy-MM-dd")}</#if> </b>
+								<span>
+									<i><#if (user.workTime)??>${(user.workTime)?string("yyyy-MM-dd")}</#if> </i>
+								</span>
+							</p>
+							<p class="x riqi">
+							    <b><#if (user.workTimeEnd)??>${(user.workTimeEnd)?string("yyyy-MM-dd")}</#if></b>
+								<span>
+									<i><#if (user.workTimeEnd)??>${(user.workTimeEnd)?string("yyyy-MM-dd")}</#if></i>
+								</span>
+							</p>
+						</div>
+					</div>
+					<!-- <p class="ps">颁证机关：河北省司法厅</p> -->
+					<i class="fgx"></i>
+					<p class="ps2">首次获准登记日期</p>
+				    <h4><#if user.registTime??> ${(user.registTime)?string("yyyy-MM-dd")}</#if></h4>
+				</div>
+				<!-- 联系电话 -->
+				<!-- <div class="lianxidianhua">
+					联系电话：0316-3218796
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<div class="w">
+		<div class="footer_box">
+			<div class="left l">
+				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+			</div>
+			<div class="right r">
+				<div class="right_1">
+					<!-- <a href="###">关于我们</a> -->
+					<a href="/web/mianze">有关声明</a>
+					<a href="/web/lianxi">联系我们</a>
+					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
+				</div>
+				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
+				<p>北京市公安局海淀分局备案：11010802010795 京ICP备05069141号</p> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer_bottom">
+		声明：本网数据源于各省区市司法厅局
+	</div> -->
+</div>
+</body>
+<script src="/web/resources/js/jquery.min.js"></script>
+<script src="/web/resources/js/global.js"></script>
+<script>
+if($(".xm").html()==""){
+	$(".jibenxinxi a").siblings('input').val("0")
+}
+/* if($(".content_box_nlyz_box span").html()==""){
+	$(".nengliyanzheng a").siblings('input').val("0")
+} */
+if($('.content_box_jgjj_box div').text()==""){
+	$(".jianjie a").siblings('input').val("0")
+}
+
+
+$(function(){
+ 
+	
+
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 600);
+          //alert(target.offset().top+50)
+        return false;
+      }
+    }
+  });
+  
+	$("#tosy").click(function(){
+	   	window.location.href="/web/toindex";
+	});
+  
+});
+
+//年龄 部分赋值
+function   ages(str)   
+{   
+      var   r   =   str.match(/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/);     
+      if(r==null)return   false;     
+      var   d=   new   Date(r[1],   r[3]-1,   r[4]);     
+      if   (d.getFullYear()==r[1]&&(d.getMonth()+1)==r[3]&&d.getDate()==r[4])   
+      {   
+            var   Y   =   new   Date().getFullYear();   
+            return((Y-r[1]));   
+      }   
+      return("输入的日期格式错误！");   
+}  
+
+
+$(".age_input").each(function(index,el){
+	$(this).siblings("span").html(ages($(this).val()))
+});
+$(".cy_input").each(function(index,el){
+	$(this).siblings("span").html(ages($(this).val()))
+});
+
+if($(".content_box_jlqk_box p").html()=="无" || $(".content_box_jlqk_box p").html()==""){
+	$(".jiangliqingkuang input").val("0");
+	$(".content_box_jlqk").hide();
+}
+
+$(".content_box_nlyz_box span").each(function(index,el){
+	//console.log(index)
+	//console.log($(".content_box_nlyz_box span").eq(0).html())
+	var el = $(".content_box_nlyz_box span").eq(index)
+	el.html(el.html().replace(/\|+/ig, ''));
+})
+</script>
+</html>

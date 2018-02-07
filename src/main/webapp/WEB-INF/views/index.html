@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="司法鉴定" />
+<meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
+<title>首页</title>
+<link rel="stylesheet" href="/resources/css/global.css">
+<link rel="stylesheet" href="/resources/css/index.css">
+</head>
+
+<body>
+<!-- 查询盒子 -->
+<div class="query">
+	<div class="mark_s"></div>
+	<div class="w">
+		<h1>
+			<img src="/resources/images/pic/logo.png" alt="" class="l">
+			<div class="r">司法部司法鉴定管理局授权发布·点睛网运营维护</div>
+		</h1>
+		<h2>全国司法鉴定人和司法鉴定机构查询平台</h2>
+		<!-- 搜索盒子 -->
+		<form action="tosousuo" method="post" id="soufuoForm">
+		<div class="search">
+			<div class="left l">
+				<input id="neirong" name="key" type="text" placeholder="请输入您想查找的内容">
+				<input id="province" name="province" type="hidden" >
+				<input id="range" name="range" type="hidden" >
+			</div>
+			<div class="right r">
+				<input id="sousuo" type="submit" value="搜  索">
+			</div>
+		</div>
+		</form>
+		<!-- 截止到某某时间盒子
+		<p class="query_time">截止到<span>2017年3月29日</span>平台现有</p>
+		平台有多所，多少人
+		<div class="query_data">
+			<div class="left l">
+				鉴定机构<b>6562</b>所
+			</div>
+			<i></i>
+			<div class="right r">
+				鉴定人<b>36562</b>人
+			</div>
+		</div> -->
+	</div>
+</div>
+<!-- 地图盒子	 -->
+<div class="map">
+	<div class="w">
+		<h2 class="map_titl">
+			<img src="/resources/images/pic/map_titl.png" alt="">
+		</h2>
+		<div class="left l">
+			<div id="main"></div>
+		</div>
+		<div class="right l">
+			<h3>
+				<span>当前省份：</span>
+				<span id="wrong-message" style="color:red">全国</span>
+			</h2>
+			<div class="right_box right_box_1">
+				<div class="zuo l">
+					鉴定机构
+				</div>
+				<div class="you r">
+					<b id="institutions">-</b>所
+				</div>
+			</div>
+			<div class="right_box right_box_2">
+				<div class="zuo l">
+					鉴定人
+				</div>
+				<div class="you r">
+					<b id="jiandingren">-</b>人
+				</div>
+			</div>
+			
+			<div class="chakanxiangqing_index">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 鉴定专业 -->
+<div class="jiandingzhuanye">
+	<div class="w">
+		<h2 class="jiandingzhuanye_title"><img src="/resources/images/pic/jiandingzhuanye_title.png" alt=""></h2>
+		<div class="jiandingzhuanye_box">
+		    <!-- 块元素开始 病理1 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('法医病理');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/binglixinxi.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('法医病理');">法医病理</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 法医临床2 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('法医临床');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/linchuangyisheng.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('法医临床');">法医临床</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 法医精神病3 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('法医精神病');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/jingshenbing.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('法医精神病');">法医精神病</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 法医物证 4-->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('法医物证');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/fayiwuzheng.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('法医物证');">法医物证</a>
+					</div>
+				</div>
+			</div>
+		    <!-- 块元素开始 毒物1 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('法医毒物');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/dupin.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('法医毒物');">法医毒物</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 文书2 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('文书鉴定');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/wenshuguanli.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('文书鉴定');">文书鉴定</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 痕迹3 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('痕迹鉴定');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/henji.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('痕迹鉴定');">痕迹鉴定</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 微量 4-->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('微量物证');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/weiliang.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('微量物证');">微量物证</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 声像5 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('声像资料');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/shengxiang.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('声像资料');">声像资料</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 环境6 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('环境损坏');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/huanjing.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('环境损坏');">环境损害</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 司法会计7 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('司法会计');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/kuaiji.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('司法会计');">司法会计</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 计算机鉴定8 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('计算机鉴定');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/zaojia.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('计算机鉴定');">计算机鉴定</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 建筑10 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('建筑工程');">
+						<div class="blokc_box_s">
+							<i><img src="/resources/images/pic/jianzhu.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('建筑工程');">建筑工程</a>
+					</div>
+				</div>
+			</div>
+			<!-- 块元素开始 知识产权11 -->
+			<div class="blokc">
+				<div class="blokc_box">
+					<a href="javascript:tosousuorange('知识产权');">
+						<div class="blokc_box_s">
+							<i class="i_s"><img src="/resources/images/pic/zhishichanquan.png" alt=""></i>
+						</div>
+					</a>
+					<div class="blokc_box_x">
+						<a href="javascript:tosousuorange('知识产权');">知识产权</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- jiandingzhuanye_box 结束 -->
+		<a class="chakangengduo" href="tosousuo">查看更多</a>
+	</div>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<div class="w">
+		<div class="footer_box">
+			<div class="left l">
+				<img src="/resources/images/pic/logo_bottom.png" alt="">
+			</div>
+			<div class="right r">
+				<div class="right_1">
+					<!-- <a href="###">关于我们</a> -->
+					<a href="mianze">有关声明</a>
+					<a href="lianxi">联系我们</a>
+					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
+				</div>
+				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
+				<p>北京市公安局海淀分局备案：11010802010795 京ICP备05069141号</p> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer_bottom">
+		声明：本网数据源于各省区市司法厅局
+	</div> -->
+</div>
+</body>
+<script src="/resources/js/jquery.min.js"></script>
+<script src="/resources/js/echarts.js"></script>
+<script src="/resources/js/global.js"></script>
+<script src="/resources/js/index.js"></script>
+<script type="text/javascript">
+function tosousuo(key){
+    $("#neirong").val(key);
+    $("#soufuoForm").submit();
+}
+function tosousuoprovince(key){
+    $("#province").val(key);
+    $("#soufuoForm").submit();
+}
+function tosousuorange(range){
+    $("#range").val(range);
+    $("#soufuoForm").submit();
+}
+
+
+
+if($("#wrong-message").html("全国")){
+	//alert("123");
+	$("#wrong-message").siblings("span").html("");
+}else{
+	
+}
+</script>
+
+
+</html>

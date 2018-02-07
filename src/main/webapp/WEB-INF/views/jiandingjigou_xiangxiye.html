@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="司法鉴定" />
+<meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
+<title>鉴定机构详细</title>
+<link rel="stylesheet" href="/web/resources/css/global.css">
+<link rel="stylesheet" href="/web/resources/css/xiangxi.css">
+</head>
+
+<body>
+<!-- 遮罩层 -->
+<div class="zhezhaoceng"></div>
+<!-- 图片弹出层 -->
+<div class="tupiandanchuceng">
+	<span class="tupiandanchuceng_gb">关闭</span>
+	<div class="tupiandanchuceng_box">
+		<img src="/web/resources/images/pic/123.jpg" alt="" class="tupiandanchuceng_img">
+	</div>
+</div>
+
+
+<!-- 公共搜索头部 -->
+<div id="top">
+	<div class="w">
+		<h1>
+			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="">
+		</h1>
+		<form action="/web/toorg" method="post" id="soufuoForm">
+			<div class="search">
+				<div class="left l">
+					<input id="neirong" type="text" name="key" placeholder="请输入您想查找的内容">
+				</div>
+				<div class="right r">
+					<input id="sousuo" type="submit" value="搜  索">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- 内容开始 -->
+<div class="content">
+	<div class="w">
+		<div class="content_title" style="height:250px;">
+			<div class="left l">
+				<img src="/web/resources/images/pic/falvfuwusuo.png" alt="">
+			</div>
+			<div class="right l">
+				<div class="content_title_right_top" style="border-bottom:1px solid #CCC; padding-bottom:20px;">
+					<div class="name l">
+						${org.fullname}
+					</div>
+					<div class="information r">
+					    <div class="xkzh l">司法鉴定许可证号：${org.licenseNumber!}</div>
+						<div class="cxdj l">诚信等级：-</div>
+						<div class="wz l">网址：</div>
+					</div>
+				</div>
+				<div class="content_title_right_center">
+					<!-- <div class="jiandingjigou_content_center">             
+						<a href="###" class="no_padding_left">监督部门：<span>${org.supervisionOrg}</span></a>
+						<a href="###">投诉电话：<span>${org.complaintTel}</span></a>
+						<a href="###">投诉邮寄地址：<span>${org.complaintAddr}</span></a>
+					</div> -->
+				</div>
+				<!-- 导航开始 -->
+				<!-- 说明：每一个li下的input 的value=1 说明有数据盒子显示 -->
+				<ul class="content_title_right_bottom">
+					<li class="jibenxinxi active">
+						<a href="#jbxx" class="as">
+							基本信息
+						</a>
+						<input type="hidden" value="1" title="基本信息">
+					</li>
+					<li class="yewufanwei">
+						<a href="#ywfw">
+							业务范围
+						</a>
+						<input type="hidden" value="1" title="业务范围">
+					</li>
+					<li class="jiangliqingkuang">
+						<a href="#jlqk">
+							奖励情况
+						</a>
+						<input type="hidden" value="1" title="奖励情况">
+					</li>
+					<li class="renzhengxinxi">
+						<a href="#rzrk">
+							认证认可
+						</a>
+						<input type="hidden" value="1" title="认证认可">
+					</li>
+					<li class="jiandingren">
+						<a href="#jdr">
+							鉴定人
+						</a>
+						<input type="hidden" value="1" title="鉴定人">
+					</li>
+					<li class="jianjie">
+						<a href="#jgjj">
+							简&nbsp;&nbsp;介
+						</a>
+						<input type="hidden" value="1" title="机构简介">
+					</li>
+					<li class="nengliyanzheng">
+						<a href="#nlyz">
+							能力验证
+						</a>
+						<input type="hidden" value="1" title="能力验证">
+					</li>
+				</ul>
+			</div>
+		</div><!-- content_title 结束 -->
+		<div class="content_box">
+			<div class="content_box_left l">
+				<!-- 基本信息 -->
+				<div class="content_box_jbxx" data="基本信息">
+					<a href="###" name="jbxx"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">基本信息</span>
+					</h5>
+					<div class="content_box_jbxx_box">
+						<div class="l">
+							<p>社会信用代码：<span>${org.creditCode}</span></p>
+							<p>许可证号：<span>${org.licenseNumber}</span></p>
+							<!-- <p>机构住所所在省/直辖市：<span>${org.province}</span></p>
+							<p>机构住所所在市/区：<span>${org.city}</span></p> -->
+							<p>机构住所详细地址：<span>${org.addr}</span></p>
+						</div>
+						<i></i>
+						<div class="r">
+						    <p>机构负责人：<span>${org.legalPerson}</span></p>
+							<p>2016年案件量：<span>${org.lastyCount}</span></p>
+							<p>司法机关委托案件量：<span>${org.lastyOrg}</span></p>
+						</div>
+					</div>
+				</div>
+				<!-- 业务范围 -->
+				<div class="content_box_ywfw" data="业务范围">
+					<a href="###" name="ywfw"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">业务范围</span>
+					</h5>
+					<div class="content_box_ywfw_box">
+						<span>${org.workRange}</span>
+					</div>
+				</div>
+				<!-- 奖励情况 -->
+				<div class="content_box_jlqk" data="奖励情况">
+					<a href="###" name="jlqk"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">奖励情况</span>
+					</h5>
+					<div class="content_box_jlqk_box">
+						<p>${org.rewardDes}</p>
+					</div>
+				</div>
+				<!-- 认证认可 -->
+				<div class="content_box_rzrk" data="认证认可">
+					<a href="###" name="rzrk"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">认证认可</span>
+					</h5>
+					<div class="content_box_rzrk_box">
+						<!-- 国家 -->
+						<div class="content_box_rzrk_box_guojia">
+							<div>
+								<p class="l">国家级资质认定：<b class="guojiajizizhirending"><#if org.isCountryc==0>参加未通过<#elseif org.isCountryc==1>通过<#elseif org.isCountryc==-1>从未参加</#if></b></p>
+								<p class="l">通过时间：<b><#if (org.countrycTime)??>${(org.countrycTime)?string("yyyy-MM-dd")}</#if></b></p>
+							</div>
+							<div class="guojia_zhengshu">
+								<img src="${baseurl}${(org.countrycFile)!}" alt="" class="zhengshu_xiao zhengshu_xiao_a">
+								<a href="###" class="chakandatu chakandatu_a"></a>
+							</div>
+						</div>
+						<!-- 省级 -->
+						<div class="content_box_rzrk_box_shengji">
+							<div>
+								<p class="l">省级资质认定：<b class="shengjizizhirending"><#if org.isProvincec==0>参加未通过<#elseif org.isProvincec==1>通过<#elseif org.isProvincec==-1>从未参加</#if></b></p>
+								<p class="l">通过时间：<b><#if (org.provincecTime)??>${(org.provincecTime)?string("yyyy-MM-dd")}</#if></b></p>
+							</div>
+							<div class="guojia_zhengshu">
+								<img src="${baseurl}${org.provincecFile!}" alt="" class="zhengshu_xiao_b">
+								<a href="###" class="chakandatu_b"></a>
+							</div>
+						</div>
+						<!-- 机构 -->
+						<div class="content_box_rzrk_box_jigou">
+							<div>
+								<p class="l">司法鉴定机构认定：<b class="sifajiandingjigourending"><#if org.isOrgc==0>参加未通过<#elseif org.isOrgc==1>通过<#elseif org.isOrgc==-1>从未参加</#if></b></p>
+								<p class="l">项目名称：<b>《${org.orgcItem}》</b></p>
+								<p class="l">通过时间：<b><#if org.orgcTime??>${(org.orgcTime)?string("yyyy-MM-dd")}</#if></b></p>
+							</div>
+							<div class="guojia_zhengshu">
+								<img src="${baseurl}${org.orgcFile!}" alt="" class="zhengshu_xiao zhengshu_xiao_c">
+								<a href="###" class="chakandatu chakandatu_c"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 执业鉴定人 -->
+				<div class="content_box_zyjdr" data="执业鉴定人" >
+					<a href="###" name="jdr"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">执业鉴定人</span>
+					</h5>
+					<div class="content_box_zyjdr_box">
+				<#if orguser?exists> 
+  					 <#list orguser as orguser> 
+
+						<a href="/web/touserxx/${orguser.id}">${orguser.realname}</a>
+
+					 </#list> 
+				</#if>			
+					</div>
+				</div>
+				<!-- 机构简介 -->
+				<div class="content_box_jgjj" data="机构简介">
+					<a href="###" name="jgjj"></a>
+					<h5>
+						<i class="l"></i>
+						<span class="l">机构简介</span>
+					</h5>
+					<div class="content_box_jgjj_box">
+				${org.intro}
+					</div>
+				</div>
+				<!-- 能力验证 -->
+				<#if org.isLastyac?? && org.isLastyac == 1>
+					<div class="content_box_nlyz" data="能力验证">
+						<a href="###" name="nlyz"></a>
+						<h5>
+							<i class="l"></i>
+							<span class="l">能力验证</span>
+						</h5>
+						<div class="content_box_nlyz_box">
+							<table border="1" cellspacing="0" cellpadding="2" bordercolor="#9ab0bd"> 
+								<!-- 表头 -->
+								<tr class="bt">
+									<td>序号</td>
+									<td>项目</td>
+									<td>时间</td>
+									<td>结果</td>
+									<td>证书</td>
+								</tr>
+								
+								<!-- 表身 -->
+								<tr class="bs">							
+									
+								</tr>
+					
+							</table>
+						</div>
+					</div>
+				</#if>
+				
+			</div>
+			<div class="content_box_right r">
+				<!-- 许可证有效期 -->
+				<div class="xukezhengyouxiaoqi">
+					<p>许可证有效期</p>
+					<div class="xukezhengyouxiaoqi_box">
+						<div class="l"><img src="/web/resources/images/pic/xukezhengyouxiaoqi_left.png" alt=""></div>
+						<div class="r">
+							<p class="s riqi">
+							    <b><#if org.validStart??>${(org.validStart)?string("yyyy-MM-dd")}</#if></b>
+								<span>
+									<i><#if org.validStart??>${(org.validStart)?string("yyyy-MM-dd")}</#if></i>
+								</span>
+							</p>
+							<p class="x riqi">
+								<b><#if org.validEnd??>${(org.validEnd)?string("yyyy-MM-dd")}</#if></b>
+								<span>
+									<i><#if org.validEnd??>${(org.validEnd)?string("yyyy-MM-dd")}</#if></i>
+								</span>
+							</p>
+						</div>
+					</div>
+					<p class="ps">颁证机关：${org.givenOrg}</p>
+					<p class="ps2">首次获准登记日期</p>
+				    <h4><#if (org.authorizedTime)??>${(org.authorizedTime)?string("yyyy-MM-dd")}</#if></h4>
+				</div>
+				<!-- 联系电话 -->
+				<div class="lianxidianhua">
+					联系电话：${org.contactTel}
+				</div>
+				<div class="bumen">
+					<p>
+						<a href="###" class="no_padding_left">监督部门：<span>${org.supervisionOrg}</span></a>
+					</p>
+					<p>
+						<a href="###">电话：<span>${org.complaintTel}</span></a>
+					</p>
+					<!-- <p>
+						<a href="###">地址：<span>${org.complaintAddr}</span></a>
+					</p> -->	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<div class="w">
+		<div class="footer_box">
+			<div class="left l">
+				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+			</div>
+			<div class="right r">
+				<div class="right_1">
+					<!-- <a href="###">关于我们</a> -->
+					<a href="/web/mianze">有关声明</a>
+					<a href="/web/lianxi">联系我们</a>
+					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
+				</div>
+				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
+				<p>北京市公安局海淀分局备案：11010802010795 京ICP备05069141号</p> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer_bottom">
+		声明：本网数据源于各省区市司法厅局 
+	</div> -->
+</div>	
+</body>
+<script src="/web/resources/js/jquery.min.js"></script>
+<!-- <script src="/web/resources/js/jiandingjigou_xiangxiye.js"></script> -->
+<script src="/web/resources/js/global.js"></script>
+<script>
+/* /* 能力验证  start*/
+$(document).ready(function() { 			
+	//加载时判断是否参加过能力验证，参加过的话有数据加载				
+		<#if org.isLastyac?? && org.isLastyac == 1>
+			nlyz(${org.lastyac!});
+			//var list = ${org.lastyac!};
+			//alert(list.length);
+		</#if>				
+		 function nlyz(list){
+			 var result;
+			 var biaoshen=$(".bs");
+			 for(var i=0;i<list.length;i++){				 
+				 if(list[i].lastyacResult===2){
+					 result="满意";
+				 }else if(list[i].lastyacResult===1){
+					 result="合格";
+				 }else{
+					 result="未通过";
+				 }
+			if(result!="未通过"){
+				 var url_s = '${baseurl}'+list[i].lastyacFile
+				 
+				 $("table").append('<tr><td class="xuhao"><i>'+(i+1)+'</i></td><td class="xiangmu">'+list[i].lastyacItem+'</td><td class="TIme">'+list[i].lastyacTime+'</td><td class="REsults">'+result+'</td><td class="zhengshu"><a href="###" class="zhengshu_btn"><img src="/web/resources/images/pic/zhengshu_ss.png" alt=""><input type="hidden" value="'+url_s+'"/></a></td>');
+				 $(".zhengshu_btn").click(function(event) {
+						$(".zhezhaoceng").slideDown(300);
+						$(".tupiandanchuceng").slideDown(400);
+						$("body").css({
+							"overflow": 'hidden',
+						});
+						var zhengshu_btn_imgs = $(this).children("input").val();
+						$(".tupiandanchuceng_img").attr('src',zhengshu_btn_imgs); 
+				});
+				 $(".content_box_nlyz").show();
+			 }else{
+				 $(".content_box_nlyz").hide();
+			 }
+				$(".REsults").each(function(){
+					console.log($(this))
+					if($(this).html()=="未通过"){
+						$(this).siblings(".zhengshu").empty()
+					}
+				})
+			 };
+	
+		}; 
+	 
+});		 
+
+
+
+$(function(){
+ $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 600);
+          //alert(target.offset().top+50)
+        return false;
+      }
+    }
+  });
+   
+  $("#tosy").click(function(){
+	   window.location.href="/web/toindex"
+  });
+});
+
+if($(".guojiajizizhirending").html()!="通过"){
+	$(".content_box_rzrk_box_guojia").hide();
+}
+if($(".shengjizizhirending").html()!="通过"){
+	$(".content_box_rzrk_box_shengji").hide();
+}
+if($(".sifajiandingjigourending").html()!="通过"){
+	$(".content_box_rzrk_box_jigou").hide();
+}
+if($(".guojiajizizhirending").html()!="通过" && $(".shengjizizhirending").html()!="通过" && $(".sifajiandingjigourending").html()!="通过"){
+	$(".renzhengxinxi input").val("0");
+	$(".renzhengxinxi").hide();
+}
+if($(".content_box_nlyz_box table").find("tr").length<=1){
+	$(".nengliyanzheng input").val("0");
+	$(".nengliyanzheng").hide();
+}
+if($(".content_box_jlqk_box p").html()=="无" || $(".content_box_jlqk_box p").html()==""){
+	$(".jiangliqingkuang input").val("0");
+	$(".content_box_jlqk").hide();
+}
+
+
+$(".content_box_ywfw_box span").each(function(index,el){
+	var el = $(".content_box_ywfw_box span").eq(index)
+	el.html(el.html().replace(/\|+/ig, '&nbsp;&nbsp;&nbsp;&nbsp;'));
+	console.log(index)
+	console.log($(".content_box_ywfw_box span").eq(0).html())
+	
+}) 
+</script>
+</html>

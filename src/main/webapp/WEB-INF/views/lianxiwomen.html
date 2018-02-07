@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="司法鉴定" />
+<meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
+<title>联系我们</title>
+<link rel="stylesheet" href="/web/resources/css/global.css">
+<link rel="stylesheet" href="/web/resources/css/index.css">
+<style>
+.center{
+	background: #f4f4f4;
+	padding-bottom:80px;
+}
+.center .w{
+	background: #FFF;
+	position:relative;
+	top:-200px;
+}
+.center .w h4{
+	color:#0666ba;
+	text-align:center;
+	border-bottom:1px solid #82b2dc;
+	font-size:24px;
+	padding-bottom:25px;
+	padding-top: 25px;
+	width: 955px;
+	margin:0px auto;
+}
+.center .w .sandakuai_box{
+	padding-bottom:150px;
+	width: 920px;
+	margin:0px auto;
+}
+.center .w .sandakuai_box .blokc{
+	width: 235px;
+	height: 297px;
+	background: #f4f4f4;
+	margin-top:80px;
+	margin-right: 100px;
+	border-radius:3px;
+	overflow:hidden;
+}
+.center .w .sandakuai_box .no_margin{
+	margin-right:0px;
+}
+.center .w .sandakuai_box .blokc img{
+	margin-top:55px;
+}
+.center .w .sandakuai_box .blokc span{
+	display:block;
+	width: 175px;
+	height: 1px;
+	background: #bbbdbf;
+	margin:33px auto;
+}
+.center .w .sandakuai_box .blokc p{
+	text-align:center;
+	margin-bottom:7px;
+}
+</style>
+</head>
+
+<body>
+<!-- 查询盒子 -->
+<div class="query">
+	<div class="mark_s"></div>
+	<div class="w">
+		<h1>
+			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="" class="l">
+			<div class="r">司法部司法鉴定管理局授权发布·点睛网运维与技术支持</div>
+		</h1>
+		<h2>全国司法鉴定人和司法鉴定机构查询平台</h2>
+		<!-- 搜索盒子 -->
+		<form action="tosousuo" method="post" id="soufuoForm">
+		<div class="search">
+			<div class="left l">
+				<input id="neirong" name="key" type="text" placeholder="请输入您想查找的内容">
+				<input id="province" name="province" type="hidden" >
+				<input id="range" name="range" type="hidden" >
+			</div>
+			<div class="right r">
+				<input id="sousuo" type="submit" value="搜  索">
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+
+<div class="center">
+	<div class="w">
+		<h4>联系我们</h4>
+		<div class="sandakuai_box">
+			<div class="blokc l">
+				<img src="/web/resources/images/pic/dianhua.png" alt="">
+				<span></span>
+				<p>咨询电话</p>
+				<p>010-62210155</p>
+				<p>010-62275399</p>
+			</div>
+			<div class="blokc l">
+				<img src="/web/resources/images/pic/dizhi.png" alt="">
+				<span></span>
+				<p>地址</p>
+				<p>北京市海淀区西土城路</p>
+				<p>10北邮科技大厦1209</p>
+			</div>
+			<div class="blokc l no_margin">
+				<img src="/web/resources/images/pic/xinxiang.png" alt="">
+				<span></span>
+				<p>投稿邮箱</p>
+				<p>zongruilong@zfwx.com</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<div class="w">
+		<div class="footer_box">
+			<div class="left l">
+				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+			</div>
+			<div class="right r">
+				<div class="right_1">
+					<!-- <a href="###">关于我们</a> -->
+					<a href="mianze">有关声明</a>
+					<a href="lianxi">联系我们</a>
+					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
+				</div>
+				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
+				<p>北京市公安局海淀分局备案：11010802010795 京ICP备05069141号</p> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer_bottom">
+		声明：本网数据源于各省区市司法厅局
+	</div> -->
+</div>
+</body>
+<script src="/web/resources/js/jquery.min.js"></script>
+<script src="/web/resources/js/global.js"></script>
+<script type="text/javascript">
+function tosousuo(key){
+    $("#neirong").val(key);
+    $("#soufuoForm").submit();
+}
+function tosousuoprovince(key){
+    $("#province").val(key);
+    $("#soufuoForm").submit();
+}
+function tosousuorange(range){
+    $("#range").val(range);
+    $("#soufuoForm").submit();
+}
+</script>
+</html>

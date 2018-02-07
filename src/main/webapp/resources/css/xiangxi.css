@@ -1,0 +1,431 @@
+﻿.content_title{
+	height: 280px;
+	background: #FFF;
+	box-shadow: 0px 0px 5px #CCC;
+}
+.content_title .left{
+	width: 140px;
+}
+.content_title .left img{
+	margin-top: 100px;
+}
+.content_title .right{
+	padding-top: 34px;
+}
+.content_title .right .content_title_right_top .name{
+	margin-right: 50px;
+	color:#0666ba;
+	font-weight:900 !important;
+	font-size: 21px;
+}
+.content_title .right .content_title_right_top .information .cxdj{
+	height: 28px;
+	line-height: 28px;
+	background: url("../images/pic/cxdj.png") no-repeat left center;
+	padding-left: 38px;
+	margin-right: 30px;
+}
+.content_title .right .content_title_right_top .information .xkzh{
+	height: 28px;
+	line-height: 28px;
+	background: url("../images/pic/content_h3.png") no-repeat left center;
+	padding-left: 38px;
+	margin-right: 30px;
+}
+.content_title .right .content_title_right_top .information .wz{
+	height: 28px;
+	line-height: 28px;
+	background: url("../images/pic/content_h4.png") no-repeat left center;
+	padding-left: 38px;
+	margin-right: 30px;
+	color:#31a417;
+}
+.content_title .right .content_title_right_bottom{
+	margin-top: 40px;
+}
+.content_title .right .content_title_right_bottom li{
+	width: 130px;
+	height: 75px;
+	background: #dde4ea;
+	border-radius:4px;
+	float: left;
+	margin-right: 10px;
+}
+.content_title .right .content_title_right_bottom li:hover{
+	background:#0666ba;
+}
+.content_title .right .content_title_right_bottom li:hover a{
+	color:#FFF;
+}
+.content_title .right .content_title_right_bottom li a{
+	display: block;
+	text-align: center;
+	line-height: 75px;
+	font-size:16px;
+	color:#8797aa;
+	padding-left: 36px;
+}
+.content_title .right .content_title_right_bottom .active{
+	background:#0666ba;
+}
+.content_title .right .content_title_right_bottom .active a{
+	color:#FFF;
+}
+/*基本信息*/
+.content_title .right .content_title_right_bottom .jibenxinxi a{
+	background: url('../images/pic/jibenxinxi.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jibenxinxi a:hover{
+	background: url('../images/pic/jibenxinxi_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jibenxinxi .as{
+	background: url('../images/pic/jibenxinxi_s.png') no-repeat 14px center;
+}
+/*业务范围*/
+.content_title .right .content_title_right_bottom .yewufanwei a{
+	background: url('../images/pic/yewufanwei.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .yewufanwei a:hover{
+	background: url('../images/pic/yewufanwei_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .yewufanwei .as{
+	background: url('../images/pic/yewufanwei_s.png') no-repeat 14px center;
+}
+/*奖励情况*/
+.content_title .right .content_title_right_bottom .jiangliqingkuang a{
+	background: url('../images/pic/jiangliqingkuang.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jiangliqingkuang a:hover{
+	background: url('../images/pic/jiangliqingkuang_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jiangliqingkuang .as{
+	background: url('../images/pic/jiangliqingkuang_s.png') no-repeat 14px center;
+}
+/*认证信息*/
+.content_title .right .content_title_right_bottom .renzhengxinxi a{
+	background: url('../images/pic/renzhengxinxi.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .renzhengxinxi a:hover{
+	background: url('../images/pic/renzhengxinxi_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .renzhengxinxi .as{
+	background: url('../images/pic/renzhengxinxi_s.png') no-repeat 14px center;
+}
+/*鉴定人*/
+.content_title .right .content_title_right_bottom .jiandingren a{
+	background: url('../images/pic/jiandingren.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jiandingren a:hover{
+	background: url('../images/pic/jiandingren_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jiandingren .as{
+	background: url('../images/pic/jiandingren_s.png') no-repeat 14px center;
+}
+/*简介*/
+.content_title .right .content_title_right_bottom .jianjie a{
+	background: url('../images/pic/jianjie.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jianjie a:hover{
+	background: url('../images/pic/jianjie_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .jianjie .as{
+	background: url('../images/pic/jianjie_s.png') no-repeat 14px center;
+}
+/*能力验证*/
+.content_title .right .content_title_right_bottom .nengliyanzheng a{
+	background: url('../images/pic/nengliyanzheng.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .nengliyanzheng a:hover{
+	background: url('../images/pic/nengliyanzheng_s.png') no-repeat 14px center;
+}
+.content_title .right .content_title_right_bottom .nengliyanzheng .as{
+	background: url('../images/pic/nengliyanzheng_s.png') no-repeat 14px center;
+}
+
+
+
+
+
+/*信息列表*/
+.content_box{
+	margin-top: 15px;
+}
+.content_box .content_box_left{
+	background: #fff;
+	width: 785px;
+	padding-left: 20px;
+	padding-right: 40px;
+	padding-bottom: 100px;
+}
+.content_box .content_box_left h5{
+	border-bottom: 1px solid #cad7df;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	color: #0666ba;
+	font-size: 16px;
+	position: relative;
+	padding-left: 25px;
+}
+.content_box .content_box_left h5 i{
+	display: block;
+	height: 18px;
+	width: 3px;
+	background: #0666ba;
+	position: absolute;
+	top:14px;
+	left:8px;
+}
+.content_box .xukezhengyouxiaoqi{
+    background: #0666ba;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+    color:#FFF;
+    padding-bottom: 30px;
+}
+.content_box .xukezhengyouxiaoqi p{
+	font-size: 16px;
+}
+.content_box .lianxidianhua{
+	background: #0666ba;
+	margin-top: 15px;
+	color:#FFF;
+	height: 97px;
+	line-height: 97px;
+	text-align: center;
+	font-size: 22px;
+}
+.content_box .bumen{
+	background: #0666ba;
+	margin-top: 15px;
+	color:#FFF;
+	padding:20px 20px;
+}
+.content_box .bumen p{
+	line-height: 30px;
+	margin-left: 19px;
+}
+.content_box .bumen a{
+	color:#FFF;
+}
+/*基本信息内容  样试*/
+.content_box_jbxx_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content_box_jbxx_box i{
+	position: absolute;
+	top:20px;
+	left:48%;
+	width: 0px;
+	height: 88%;
+	display: block;
+	border-right: 2px dotted #CCC;
+}
+.content_box_jbxx_box div.l{
+	width: 44%;
+}
+.content_box_jbxx_box div.r{
+	width: 48%;
+}
+.content_box_jbxx_box div p{
+	color:#8898a6;
+	line-height: 33px;
+
+}
+.content_box_jbxx_box div p span{
+	color:#27313a;
+}
+/*业务范围 样试表*/
+.content_box_ywfw_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content_box_ywfw_box span{
+	color:#000;
+	font-weight: 600;
+	margin-right: 18px;
+	line-height: 30px;
+}
+/*奖励情况*/
+.content_box_jlqk_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content_box_jlqk_box p{
+	font-weight: 600;
+	line-height: 30px;
+}
+/*认证认可*/
+.content_box_rzrk_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content_box_rzrk_box p{
+	display: block;
+	margin-right: 35px;
+}
+/*各大证书*/
+.guojia_zhengshu{
+	width: 168px;
+	height: 177px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.content_box_rzrk_box .zhengshu_xiao{
+	width: 168px;
+	height: 177px;
+}
+.chakandatu{
+	display: block;
+	width: 168px;
+	height: 177px;
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 2;
+	background: url('../images/pic/chakandatu.png') no-repeat center;
+}
+
+/*执业鉴定人*/
+.content_box_zyjdr_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content_box_zyjdr_box a{
+	margin-right: 10px;
+	line-height: 28px;
+	color:#0666ba;
+	font-weight: 600;
+}
+/*机构简介*/
+.content_box_jgjj_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+	line-height: 28px;
+}
+/*能力验证*/
+.content_box_nlyz_box{
+	width: 704px;
+	margin:0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position:relative;
+}
+.content table{
+	 width: 700px;
+}
+.content table .bt td{
+	color:#0666ba;
+	font-weight: 600;
+	font-size: 16px;
+}
+.content table td{
+	vertical-align: middle;
+	text-align: center;
+	padding:8px 0px;
+}
+.content table .xuhao i{
+	display: block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 100%;
+	background: #99afbd;
+	color:#FFF;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content table .xiangmu{
+	width: 235px;
+}
+.content table .zhengshu{
+	cursor:pointer;
+}
+
+
+.content_box .content_box_right{
+	width: 340px;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box{
+	width: 100px;
+	margin:22px auto;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box div.r{
+	padding-top: 32px;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box p{
+	margin-bottom: 43px;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box p b{
+	font-size: 22px;
+	display: block;
+	width:55px;
+	height:30px;
+	overflow:hidden;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box p span{
+	display: block;
+	position:relative;
+	width:45px;
+	height:30px;
+	overflow:hidden;
+}
+.content_box .content_box_right .xukezhengyouxiaoqi_box p span i{
+	position:absolute;
+	top:2px;
+	left:-44px;
+}
+.xukezhengyouxiaoqi .ps{
+	border-bottom: 1px solid #6590b6;
+	padding-bottom: 15px;
+	width: 100%;
+}
+.xukezhengyouxiaoqi .ps2{
+	padding:20px 0px;
+}
+.xukezhengyouxiaoqi h4{
+	text-align: center;
+	font-size: 25px;
+}
+
+
+
+
+
+/*鉴定人不同的修改*/
+.content_title .right .content_title_right_top .information .zzdw{
+	height: 28px;
+	line-height: 28px;
+	background: url("../images/pic/zzdw.png") no-repeat left center;
+	padding-left: 38px;
+	margin-right: 30px;
+	color:#31a417;
+}
+.content_box_nlyz_box span{
+	padding:0px 8px;
+	line-height: 28px;
+}
+
+

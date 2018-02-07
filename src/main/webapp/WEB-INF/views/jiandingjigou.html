@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="司法鉴定" />
+<meta name="description" content="全国司法鉴定人和司法鉴定机构查询平台"/>
+<title>鉴定机构</title>
+<link rel="stylesheet" href="/web/resources/css/global.css">
+<!-- 分页 -->
+<link rel="stylesheet" href="/web/resources/css/reset.css">
+<link rel="stylesheet" href="/web/resources/css/pageCode.css">
+</head>
+<body>
+<!-- 页面加载时  加载的数据 -->
+<!-- 省级 -->
+<input type="hidden" value="${province}" id="dangqiansheng"/>
+<!-- 业务领域 -->
+<input type="hidden" value="${range!}" id="yewulingyu"/>
+<!-- 表单隐藏域 -->
+<div style="display:none;" id="toorg">
+	<form action="toorg" method="post" id="toorgform">
+		<input type="hidden" name="province" value="${province!}" id="toorgprovince">
+		<input type="hidden" name="range" value="${range!}" id="toorgrange">
+		<input type="hidden" name="key" value="${key!}" id="toorgkey">
+	</form>
+</div>
+<div style="display:none;" id="touser">
+	<form action="touser" method="post" id="touserform">
+		<input type="hidden" name="province" value="${province!}" id="touserprovince">
+		<input type="hidden" name="range" value="${range!}" id="touserrange">
+		<input type="hidden" name="key" value="${key!}" id="touserkey">
+	</form>
+</div>
+<!-- 公共搜索头部 -->
+<div id="top">
+	<div class="w">
+		<h1>
+			<img id="tosy" src="/web/resources/images/pic/logo.png" alt="">
+		</h1>
+		<form action="toorg" method="post" id="soufuoForm">
+			<input type="hidden" name="province" value="${province}" id="province">
+			<input type="hidden" name="range" value="${range}" id="range">
+			<input type="hidden" name="start" value="0" id="start">
+			<div class="search">
+				<div class="left l">
+					<input id="neirong" type="text" name="key" value="${key!}" placeholder="请输入您想查找的内容">
+				</div>
+				<div class="right r">
+					<input id="sousuo" type="submit" value="搜  索">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- 筛选条件盒子 -->
+<div class="screening">
+	<div class="w">
+		<div class="screening_box">
+			<!-- 查询主体 -->
+			<div class="chaxunzhuti">
+				<div class="left l">
+					查询主体：
+				</div>
+				<div class="right l">
+					<!-- <span class="l"></span> -->
+					<a href="/web/tosousuo" class="l">全部</a>
+					<!-- <a href="/web/toorg?province=${province!}&key=${key!}&range=${range}" class="l act">鉴定机构</a>
+					<a href="/web/touser?province=${province!}&key=${key!}&range=${range}" class="l">鉴定人</a> -->
+					<a href="javascript:toorgform();" class="l act">鉴定机构</a>
+					<a href="javascript:touserform();" class="l">鉴定人</a>
+				</div>
+			</div>
+			<!-- 所在省份 -->
+			<div class="suozaishengfen">
+				<div class="left l">
+					所在省份：
+				</div>
+				<div class="right l">
+					<a href="javascript:toorg('');" class="l act qb">全部</a>
+					<div class="l suozaishengfen_box" style="position:relative; top:-5px;">
+						
+						    <a href="javascript:toorg('北京');">北京</a>
+							<a href="javascript:toorg('天津');">天津</a>
+							<a href="javascript:toorg('河北');">河北</a>
+							<a href="javascript:toorg('山西');">山西</a>
+							<a href="javascript:toorg('内蒙古');">内蒙古</a>
+							<a href="javascript:toorg('辽宁');">辽宁</a>
+							<a href="javascript:toorg('吉林');">吉林</a>
+							<a href="javascript:toorg('黑龙江');">黑龙江</a>
+							<a href="javascript:toorg('上海');">上海</a>
+							<a href="javascript:toorg('江苏');">江苏</a>
+							<a href="javascript:toorg('浙江');">浙江</a>
+							<a href="javascript:toorg('安徽');">安徽</a>
+						
+						
+							<a href="javascript:toorg('福建');">福建</a>
+							<a href="javascript:toorg('江西');">江西</a>
+							<a href="javascript:toorg('山东');">山东</a>
+							<a href="javascript:toorg('河南');">河南</a>
+							<a href="javascript:toorg('湖北');">湖北</a>
+							<a href="javascript:toorg('湖南');">湖南</a>
+							<a href="javascript:toorg('广东');">广东</a>
+							<a href="javascript:toorg('广西');">广西</a>
+							<a href="javascript:toorg('海南');">海南</a>
+							<a href="javascript:toorg('重庆');">重庆</a>
+							<a href="javascript:toorg('四川');">四川</a>
+							<a href="javascript:toorg('贵州');">贵州</a>
+						
+						
+							<a href="javascript:toorg('云南');">云南</a>
+							<a href="javascript:toorg('西藏');">西藏</a>
+							<a href="javascript:toorg('陕西');">陕西</a>
+							<a href="javascript:toorg('甘肃');">甘肃</a>
+							<a href="javascript:toorg('青海');">青海</a>
+							<a href="javascript:toorg('宁夏');">宁夏</a>
+							<a href="javascript:toorg('新疆');">新疆</a>
+							<!-- <a href="javascript:toorg('香港');">香港</a>
+							<a href="javascript:toorg('澳门');">澳门</a> -->
+							<a href="javascript:toorg('台湾');">台湾</a>
+						
+					</div>
+				</div>
+			</div>
+			<!-- 业务领域 -->
+			<div class="yewulingyu">
+				<div class="left l">
+					业务领域：
+				</div>
+				<div class="right l">
+					<a href="javascript:torange('');" class="l act ly">全部</a>
+					<div class="l yewulingyu_box">
+						<a href="javascript:torange('法医病理');">法医病理</a>
+						<a href="javascript:torange('法医临床');">法医临床</a>
+						<a href="javascript:torange('法医精神病');">法医精神病</a>
+						<a href="javascript:torange('法医物证');">法医物证</a>
+						<a href="javascript:torange('法医毒物');">法医毒物</a>
+						<a href="javascript:torange('文书鉴定');">文书鉴定</a>
+						<a href="javascript:torange('痕迹鉴定');">痕迹鉴定</a>
+						<a href="javascript:torange('微量物证');">微量物证</a>
+						<a href="javascript:torange('声像资料');">声像资料</a>
+						<a href="javascript:torange('环境损害');">环境损害</a>
+						<a href="javascript:torange('司法会计');">司法会计</a>			
+						<a href="javascript:torange('计算机鉴定');">计算机鉴定</a>
+						<a href="javascript:torange('建筑工程');">建筑工程</a>
+						<a href="javascript:torange('知识产权');">知识产权</a>
+						<a href="javascript:torange('海事物证');">海事物证</a>
+						<a href="javascript:torange('产品质量');">产品质量</a>
+						<a href="javascript:torange('动植物类');">动植物类</a>
+						<a href="javascript:torange('化工类法');">化工类法</a>
+						<a href="javascript:torange('资产评估');">资产评估</a>
+						<a href="javascript:torange('环境损坏');">环境损坏</a>	
+						<a href="javascript:torange('机动车');">机动车</a>
+						<a href="javascript:torange('电力类');">电力类</a>
+						<a href="javascript:torange('农业类');">农业类</a>
+						<a href="javascript:torange('水产类');">水产类</a>
+						<a href="javascript:torange('矿产类');">矿产类</a>
+						<a href="javascript:torange('机电类');">机电类</a>
+						<a href="javascript:torange('火灾类');">火灾类</a>
+						<a href="javascript:torange('涉税类');">涉税类</a>
+						<a href="javascript:torange('道路交通事故');">道路交通事故</a>
+						<a href="javascript:torange('林业');">林业</a>
+						<a href="javascript:torange('其他');">其他</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 内容盒子 -->
+<div class="content">
+	<div class="w">
+	<#if allorg?exists> 
+   <#list allorg as org> 
+		<!-- 块元素开始 -->
+		<div class="content_blokc">
+			<div class="left l">
+				<img src="/web/resources/images/pic/falvfuwusuo.png" alt="">
+			</div>
+		
+			<div class="right r">
+				<div class="content_blokc_right_top">
+					<div class="zuo l"><a class="zuo l" href="/web/toorgxx/${org.id}">${org.fullname}</a></div>
+					<div class="you r">
+						<h3 class="l">司法鉴定许可证号：<span>${org.licenseNumber}</span></h3>
+						<h4 class="l">
+							<i class="l"><img src="/web/resources/images/pic/content_h4.png" alt=""></i>
+							<p class="l">网址：<a href="${org.website}" class="gg_wz"  target="_blank"></a></p>
+						</h4>
+					</div>
+				</div>
+				<div class="jiandingjigou_content_center">             
+					<a href="###" style="padding-left:0;">机构负责人：<span>${org.legalPerson}</span></a>
+					<a href="###" style="border:0">电话：<span>${org.contactTel}</span></a>
+					<a href="###" style="border:0">社会信用代码：<span>${org.creditCode}</span></a>
+					<a href="###" style="border:0; margin-top:10px; display:inline-block; padding-left:0px;">地址：<span>${org.addr}</span></a>
+					<!-- <a href="###" >地址：<span>${org.complaintAddr}</span></a> -->
+				</div>
+				<div class="content_blokc_right_text">
+					<a href="/web/toorgxx/${org.id}"}>${org.intro!}</a>
+				</div>
+				<div style="border-top:1px solid #e1e1e1; margin-top:10px; padding-top:10px; color:#999;">
+					<span>业务范围：</span>
+					<!-- 循环下面的span 标签 -->
+					<span style="margin-right:6px;" class="ywfw">${org.workRange}</span>
+				<!-- 	<span style="margin-right:6px;">法医临床</span>
+					<span style="margin-right:6px;">法医临床</span>
+					<span style="margin-right:6px;">法医临床</span>
+					<span style="margin-right:6px;">法医临床</span>
+					<span style="margin-right:6px;">法医临床</span>
+					<span style="margin-right:6px;">法医临床</span> -->
+				</div>
+			</div>
+		</div><!-- 块元素 结束 -->
+		   </#list> 
+		</#if>
+		<!-- 块元素开始 -->
+	<!-- 	<div class="content_blokc">
+			<div class="left l">
+				<img src="/web/resources/images/pic/falvfuwusuo.png" alt="">
+			</div>
+			<div class="right r">
+
+				<div class="content_blokc_right_top">
+					<div class="zuo l">${org.fullname}</div>
+					<div class="you r">
+						<h3 class="l">许可证号：<span>131003145</span></h3>
+						<h4 class="l">
+							<i class="l"><img src="/web/resources/images/pic/content_h4.png" alt=""></i>
+							<p class="l">网址：<a href="###" id="wangzhi"></a></p>
+						</h4>
+					</div>
+				</div>
+				<div class="jiandingjigou_content_center">             
+					<a href="###">监督部门：<span>三河市司法局</span></a>
+					<a href="###">投诉电话：<span>0316-3212845</span></a>
+					<a href="###">投诉邮寄地址：<span>河北省三河市迎宾南路145号</span></a>
+				</div>
+				<div class="content_blokc_right_text">
+					<a href="###">三河司法医学鉴定中心是三河市司法局依据全国人大常委会关于司法鉴定管理问题的决定，经河北省司法厅核准登记后，于2003年9月1日，依托三河市医院建立的法医临床鉴定机构。 本机构共有8名鉴定人员，均为专业临床科主任，均具备各临床专业中、高级职称资格。法人代表和分管领导由已在任多年的院长王成和刘海永担任。并于2014年通过了司法部技术研究所的能力验证。 我们的工作是运用法医临床理论和技术，对涉及与法律相关的人体损伤和伤残问题，依据相关的国家标准，对其损伤程度和伤残等级做出科学客观的评定。 科学、客观、公平、公正是我们的准则，认真严谨是我们的态度。以客观事实为基础；以医学科学为...</a>
+				</div>
+			</div>
+		</div>块元素 结束 -->
+		<div class="fenye">
+			<!-- <span class="fenye_left l"></span>
+			<div class="l">
+				<a href="###" class="fenye_act">1</a>
+				<a href="###">2</a>
+				<a href="###">3</a>
+				<a href="###">4</a>
+				<a href="###">5</a>
+				<span>...</span>
+			
+			</div>
+			<span class="fenye_right r"></span>  -->
+			<div class="tcdPageCode"><span class="disabled">上一页</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">6</a><a href="javascript:;" class="nextPage">下一页</a></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- footer -->
+<div id="footer">
+	<div class="w">
+		<div class="footer_box">
+			<div class="left l">
+				<img src="/web/resources/images/pic/logo_bottom.png" alt="">
+			</div>
+			<div class="right r">
+				<div class="right_1">
+					<!-- <a href="###">关于我们</a> -->
+					<a href="mianze">有关声明</a>
+					<a href="lianxi">联系我们</a>
+					<a href="http://www.moj.gov.cn/node_86656.htm?node=86513" target="_blank">司法部司鉴定管理局官网</a>
+				</div>
+				<p><a href="http://www.djfw.net" target="_blank">2011-2017 © 点睛网运营维护</a></p>
+				<p>北京市公安局海淀分局备案：11010802010795 京ICP备05069141号</p> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer_bottom">
+		声明：本网数据源于各省区市司法厅局
+	</div> -->
+</div>	
+</body>
+<script src="/web/resources/js/jquery.min.js"></script>
+<script src="/web/resources/js/jquery.page.js"></script>
+<script src="/web/resources/js/global.js"></script>
+<script>
+
+ function toorgform(){
+    $("#toorgform").submit();
+}
+function touserform(){  
+    $("#touserform").submit();
+}
+
+//分页回调函数
+var pageSize = ${(page.pageSize)!15};
+$(".tcdPageCode").createPage({
+    pageCount:${page.pageNo!1},//总页数
+    current:${page.curNo!1},
+    backFn:function(p){
+    	//p是当前页码
+    	$("#start").val((p-1)*pageSize);
+        $("#soufuoForm").submit();
+    }
+});
+
+	$("#tosy").click(function(){
+
+            	   window.location.href="/web/toindex"
+           
+	}); 
+//省
+function toorg(province){
+	//$("#neirong").val("");
+    $("#province").val(province);
+    $("#soufuoForm").submit();
+}
+//业务范围
+function torange(range){
+	//$("#neirong").val("");
+    $("#range").val(range);
+    $("#soufuoForm").submit();
+}
+$("#tosy").click(function(){
+	   window.location.href="/web/toindex"
+});
+
+//给当前的省添加高亮
+$(".suozaishengfen_box a").each(function(index,el){
+	if($(".suozaishengfen_box a").eq(index).html()==$("#dangqiansheng").val()){
+		$(this).addClass("acti").next().css({
+			"border-left":"1px solid #abb2c3 "
+		});   
+		$(".screening .screening_box .right .qb").removeClass("act");
+	}
+})
+//给当前的业务范围添加高亮
+$(".yewulingyu_box a").each(function(index,el){
+	if($(".yewulingyu_box a").eq(index).html()==$("#yewulingyu").val()){
+		$(this).addClass("acti").next().css({
+			"border-left":"1px solid #abb2c3 "
+		});   
+		$(".screening .screening_box .right .ly").removeClass("act");
+	}
+})
+
+
+$(function(){
+	var _this ="";
+	if($("#dangqiansheng").val()!=""){
+		var sss = $("#dangqiansheng").val();
+		sss = $.trim(sss);
+		$(".suozaishengfen_box a").each(function(index,el){
+			if($(".suozaishengfen_box a").eq(index).html()==sss){
+				$(this).addClass("acti").next().css({
+					"border-left":"1px solid #abb2c3 "
+				})
+				$(".screening .screening_box .right .qb").removeClass("act");
+				_this = $(this)
+			}
+		});
+	    _this.click(function(event) {
+		        console.log('点击以后弹出')
+		}).trigger('click');
+
+	}
+	if($("#neirong").val()!=""){
+		var ggg = $("#neirong").val();
+		ggg = $.trim(ggg);
+		$(".yewulingyu_box a").each(function(index,el){
+			if($(".yewulingyu_box a").eq(index).html()==ggg){
+				$(this).addClass("acti").next().css({
+					"border-left":"1px solid #abb2c3 "
+				}); 
+				$(".screening .screening_box .right .ly").removeClass("act");
+			}
+		})
+	}
+})
+
+	$(".ywfw").each(function(index,el){
+		var el = $(".ywfw").eq(index)
+		el.html(el.html().replace(/\|+/ig, '&nbsp;&nbsp;&nbsp;&nbsp;'));
+		console.log(index)
+		console.log($(".ywfw").eq(0).html())
+		
+	}) 
+</script>
+</html>
+
+
+
+
+
+
+
